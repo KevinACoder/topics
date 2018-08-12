@@ -1,4 +1,4 @@
-all: sort
+all: to_sort
 
-sort: sort_met1.cpp
-	g++ -g -Wall -std=c++11 -o sort sort_met1.cpp
+to_sort: main.cpp sort_methods.cpp ../inc/sort_methods.h 
+	g++ -g -Wall -std=c++11 -o to_sort main.cpp sort_methods.cpp
