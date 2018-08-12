@@ -101,7 +101,7 @@ string frequency_sort(string str)
 	vector<int> char_cnt(arr_len, 0);
 	priority_queue<pair<int, char>> pq;
 
-	for/*(int i = 0; i < str.size(); ++i)*/(auto s : str)
+	for(auto s : str)
 	{
 		//char_cnt[(int)str[i]]++;
 		char_cnt[(int)s]++;
@@ -181,4 +181,39 @@ void merge_sort(F*& arr, int low, int up)
 		merge(arr, low, middle, up);
 	}
 
+}
+
+bt_node* insert_bst(bt_node *root, F key)
+{
+	if(nullptr == root)
+		root = new bt_node(key);
+	else if(key < root->_val)
+		root->_left = insert_bst(root->_left, key);
+	else
+		root->_right = insert_bst(root->_right, key);
+
+	return root;
+}
+
+void inorder_visit(bt_node *root, F*& arr, int& ix)
+{
+	if(root == nullptr)
+		return;
+
+	inorder_visit(root->_left, arr, ix);
+	arr[ix] = root->_val;
+	++ix;
+	inorder_visit(root->_right, arr, ix);
+}
+
+void bst_sort(F*& arr, const int len)
+{
+	bt_node *root = nullptr;
+	for(int i = 0; i < len; ++i)
+	{
+		root = insert_bst(root, arr[i]);
+	}
+
+	int ix = 0;
+	inorder_visit(root, arr, ix);
 }

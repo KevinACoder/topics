@@ -19,7 +19,8 @@ int main(int argc, char const *argv[])
 
 		//normalize(arr, test_len);
 		//bucket_sort(arr, test_len);
-		merge_sort(arr, 0, test_len-1);
+		//merge_sort(arr, 0, test_len-1);
+		bst_sort(arr, test_len);
 		print(arr, test_len);
 
 		string raw_text = "asdcfedstfgtsdasedvgf";
