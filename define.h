@@ -70,5 +70,14 @@ void del_list(sl_node **head_ref);
 bool search_list_recursive(sl_node *head, val_type key);
 sl_node *get_the_nth_node(sl_node *head, int n);
 sl_node *get_the_nth_node_from_tail(sl_node *head, int n);
+sl_node *get_mid_node(sl_node *head);//get middle node of list
+sl_node *rev_list(sl_node *head); //reverse list
+sl_node *cp_list(sl_node *head); //copy and create a new list
+bool is_list_palindrome(sl_node *head); //check if list is palindrome
+bool is_list_palindrome2(sl_node *head);
+sl_node *find_prev_node(sl_node *head, sl_node *target); //return prev node of target
+sl_node *rm_duplicate_node(sl_node *head);
+void swap_nodes(sl_node **head_ref, sl_node *node1, sl_node *node2);
+bool node_exist(sl_node *head, sl_node *node); //check if node exist in list
 
 #endif
