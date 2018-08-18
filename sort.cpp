@@ -1,4 +1,40 @@
-#include "../inc/sort_methods.h"
+#include "define.h"
+
+template<typename X>
+void print(X* arr, int len)
+{
+	int ix = 0;
+	while(len--)
+	{
+		cout<<"["<<ix<<"] "<<arr[ix]<<endl;
+		++ix;
+	}
+}
+
+void sort_demo()
+{
+	int test_time = 1;
+	const int test_len = 100;
+
+	while(test_time-->0)
+	{
+		val_type* arr = new val_type[test_len];
+		for(int i = 0; i < test_len; ++i)
+		{
+			arr[i] = ((val_type)rand()/RAND_MAX);
+		}
+
+		//normalize(arr, test_len);
+		//bucket_sort(arr, test_len);
+		//merge_sort(arr, 0, test_len-1);
+		bst_sort(arr, test_len);
+		print(arr, test_len);
+
+		string raw_text = "asdcfedstfgtsdasedvgf";
+		string sort_text = frequency_sort(raw_text);
+		printf("sorted: %s\n", sort_text.c_str());
+	}
+}
 
 template<typename M>
 void swap(M &a, M &b)
@@ -8,7 +44,7 @@ void swap(M &a, M &b)
 	b = tmp;
 }
 
-void cocktail_sort(F*& arr, const int len)
+void cocktail_sort(val_type*& arr, const int len)
 {
 	if(nullptr == arr)
 		return;
@@ -16,7 +52,7 @@ void cocktail_sort(F*& arr, const int len)
 	bool swapped = true;
 	int start = 0;
 	int end = len - 1;
-	F*& a = arr;
+	val_type*& a = arr;
 
 	while (swapped) 
 	{
@@ -63,7 +99,7 @@ void cocktail_sort(F*& arr, const int len)
 }
 
 //https://www.geeksforgeeks.org/bucket-sort-2/
-void bucket_sort(F*& arr, const int n)
+void bucket_sort(val_type*& arr, const int n)
 {
 	if(nullptr == arr)
 		return;
@@ -125,11 +161,11 @@ string frequency_sort(string str)
 
 }
 
-void merge(F*& arr, int low, int middle, int up)
+void merge(val_type*& arr, int low, int middle, int up)
 {
 	int len1 = middle - low + 1;
 	int len2 = up - middle;
-	F first_half[len1], second_half[len2];
+	val_type first_half[len1], second_half[len2];
 
 	for(int i = 0; i < len1; ++i)
 		first_half[i] = arr[low + i];
@@ -169,7 +205,7 @@ void merge(F*& arr, int low, int middle, int up)
 	}
 }
 
-void merge_sort(F*& arr, int low, int up)
+void merge_sort(val_type*& arr, int low, int up)
 {
 	if(low < up)
 	{
@@ -183,10 +219,10 @@ void merge_sort(F*& arr, int low, int up)
 
 }
 
-bt_node* insert_bst(bt_node *root, F key)
+bst_node* insert_bst(bst_node *root, val_type key)
 {
 	if(nullptr == root)
-		root = new bt_node(key);
+		root = new bst_node(key);
 	else if(key < root->_val)
 		root->_left = insert_bst(root->_left, key);
 	else
@@ -195,7 +231,7 @@ bt_node* insert_bst(bt_node *root, F key)
 	return root;
 }
 
-void inorder_visit(bt_node *root, F*& arr, int& ix)
+void inorder_visit(bst_node *root, val_type*& arr, int& ix)
 {
 	if(root == nullptr)
 		return;
@@ -206,9 +242,9 @@ void inorder_visit(bt_node *root, F*& arr, int& ix)
 	inorder_visit(root->_right, arr, ix);
 }
 
-void bst_sort(F*& arr, const int len)
+void bst_sort(val_type*& arr, const int len)
 {
-	bt_node *root = nullptr;
+	bst_node *root = nullptr;
 	for(int i = 0; i < len; ++i)
 	{
 		root = insert_bst(root, arr[i]);
