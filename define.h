@@ -82,9 +82,11 @@ public:
 	graph(int num);
 	void add_edge(int u, int v);
 	void bfs_print(int u);
+	void dfs_print(int u);
 
 private:
 	sl_node *new_node(int data);
+	void dfs_until(int u, bool visited[]);
 };
 
 //algorithm
@@ -127,6 +129,11 @@ sl_node *rm_duplicate_node(sl_node *head);
 void swap_nodes(sl_node **head_ref, sl_node *node1, sl_node *node2);
 bool node_exist(sl_node *head, sl_node *node); //check if node exist in list
 sl_node *get_tail(sl_node *head);
+
+// ...binary search tree
+bst_node *insert(bst_node *root, val_type key);
+bst_node *search(bst_node *root, val_type key);
+void print_inorder(bst_node *root);
 
 // ...stack
 void stack_demo();

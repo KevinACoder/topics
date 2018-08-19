@@ -8,9 +8,10 @@ void graph_demo()
 	gh->add_edge(0, 1);
 	gh->add_edge(1, 2);
 	gh->add_edge(2, 3);
-	gh->add_edge(3, 4);
+	//gh->add_edge(3, 4);
 
-	gh->bfs_print(0);
+	//gh->bfs_print(0);
+	gh->dfs_print(0);
 }
 
 graph::graph(int num)
@@ -71,5 +72,32 @@ void graph::bfs_print(int u)
 		}
 	}
 
+	delete[] visited;
 	cout<<endl;
+}
+
+void graph::dfs_print(int u)
+{
+	bool *visited = new bool[_node_num]{false};
+
+	dfs_until(u, visited);
+
+	delete[] visited;
+	cout<<endl;
+}
+
+void graph::dfs_until(int u, bool visited[])
+{
+	visited[u] = true;
+	cout<< u << " ";
+
+	sl_node *adjs = _adj_list[u];
+	while(adjs != nullptr)
+	{
+		if(!visited[(int)adjs->_val])
+			dfs_until(adjs->_val, visited);
+
+		adjs = adjs->_next;
+	}
+
 }
