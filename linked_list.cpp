@@ -398,3 +398,14 @@ void swap_nodes(sl_node **head_ref, sl_node *node1, sl_node *node2)
 		node1->_next = aft_node2;
 	}
 }
+
+sl_node *get_tail(sl_node *head)
+{
+	if(head == nullptr)
+		return head;
+
+	while(head->_next)
+		head = head->_next;
+
+	return head;
+}

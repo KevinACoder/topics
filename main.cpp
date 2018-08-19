@@ -5,7 +5,10 @@ int main(int argc, char const *argv[])
 {
 	/* code */
 	srand(time(NULL));
-	sort_demo();
+	//sort_demo();
 	//linked_list_demo();
+	//stack_demo();
+	//queue_demo();
+	graph_demo();
 	return 0;
 }

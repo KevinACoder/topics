@@ -45,6 +45,48 @@ struct bst_node
 	bst_node(val_type val):_val(val),_left(nullptr),_right(nullptr){}
 };
 
+struct stack
+{
+	sl_node   *_list;
+
+public:
+	stack():_list(nullptr){}
+	bool is_empty();
+	void push(val_type data);
+	val_type pop();
+	val_type peek();
+
+private:
+	sl_node *new_node(val_type data);
+};
+
+struct queue
+{
+	stack    _stack_in;
+	stack    _stack_out;
+
+public:
+	queue():_stack_in(),_stack_out(){}
+	void enqueue(val_type data);
+	val_type dequeue();
+	bool is_empty();
+};
+
+struct graph
+{
+	sl_node		**_adj_list;
+	int			*_node_list;
+	int         _node_num;
+
+public:
+	graph(int num);
+	void add_edge(int u, int v);
+	void bfs_print(int u);
+
+private:
+	sl_node *new_node(int data);
+};
+
 //algorithm
 // ...sort
 void cocktail_sort(val_type*& arr, const int len);
@@ -84,5 +126,15 @@ sl_node *find_prev_node(sl_node *head, sl_node *target); //return prev node of t
 sl_node *rm_duplicate_node(sl_node *head);
 void swap_nodes(sl_node **head_ref, sl_node *node1, sl_node *node2);
 bool node_exist(sl_node *head, sl_node *node); //check if node exist in list
+sl_node *get_tail(sl_node *head);
+
+// ...stack
+void stack_demo();
+
+// ...queue
+void queue_demo();
+
+// ...graph
+void graph_demo();
 
 #endif
