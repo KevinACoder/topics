@@ -9,11 +9,12 @@ void print(X* arr, int len)
 		cout<<"["<<ix<<"] "<<arr[ix]<<endl;
 		++ix;
 	}
+	cout<<endl;
 }
 
 void sort_demo()
 {
-	int test_time = 1;
+	/*int test_time = 1;
 	const int test_len = 100;
 
 	while(test_time-->0)
@@ -33,7 +34,21 @@ void sort_demo()
 		string raw_text = "asdcfedstfgtsdasedvgf";
 		string sort_text = frequency_sort(raw_text);
 		printf("sorted: %s\n", sort_text.c_str());
+	}*/
+
+	const int len = 10;
+	val_type arr[len] = {10};
+	for(int i = 0; i < len; ++i)
+	{
+		arr[i] = rand()%100;
 	}
+	print(arr, len);
+	//bubble_sort(arr, len);
+	//selection_sort(arr, len);
+	//insert_sort(arr, len);
+	//quick_sort(arr, 0, len-1);
+	merge_sort(arr, 0, len-1);
+	print(arr, len);
 }
 
 template<typename M>
@@ -161,7 +176,7 @@ string frequency_sort(string str)
 
 }
 
-void merge(val_type*& arr, int low, int middle, int up)
+void merge(val_type arr[], int low, int middle, int up)
 {
 	int len1 = middle - low + 1;
 	int len2 = up - middle;
@@ -205,7 +220,7 @@ void merge(val_type*& arr, int low, int middle, int up)
 	}
 }
 
-void merge_sort(val_type*& arr, int low, int up)
+void merge_sort(val_type arr[], int low, int up)
 {
 	if(low < up)
 	{
@@ -252,4 +267,78 @@ void bst_sort(val_type*& arr, const int len)
 
 	int ix = 0;
 	inorder_visit(root, arr, ix);
+}
+
+void bubble_sort(val_type arr[], const int len)
+{
+	for(int i = 0; i < len - 1; ++i)
+		for(int j = 0; j < len - i - 1; ++j)//reduce unsorted region by i
+		{
+			if(arr[j] > arr[j+1]) //!!
+				swap(arr[j], arr[j+1]);
+		}
+}
+
+void selection_sort(val_type arr[], const int len)
+{
+	for(int i = 0; i < len-1; ++i) //0...len-1, sorted region is 0 at start
+	{
+		int min_ix = i; //find the min index
+		for(int j = i+1; j < len; ++j)//1...len
+		{
+			if(arr[j] < arr[min_ix])
+				min_ix = j;
+		}
+
+		swap(arr[min_ix], arr[i]);
+	}
+}
+
+void insert_sort(val_type arr[], const int len)
+{
+	int val = INT_MIN;
+	for(int i = 1; i < len; ++i)
+	{
+		val = arr[i];
+
+		int j = i-1;
+		while(j >= 0 && arr[j] > arr[j+1])
+		{
+			swap(arr[j], arr[j+1]);
+			--j;
+		}
+
+		arr[j] = val;
+	}
+
+}
+
+void quick_sort(val_type arr[], int low, int high)
+{
+	if(low < high)
+	{
+		int pi = partition(arr, low, high);
+
+		quick_sort(arr, low, pi-1);
+		quick_sort(arr, pi+1, high);
+	}
+}
+
+int partition(val_type arr[], int low, int high)
+{
+  int pivot = arr[high];    // pivot
+  int i = low-1;  // Index of smaller element
+ 
+    for (int j = low; j <= high- 1; j++)
+    {
+        // If current element is smaller than or
+        // equal to pivot
+        if (arr[j] <= pivot)
+        {
+            i++;    // increment index of smaller element
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i + 1], arr[high]);
+    return (i + 1);
 }

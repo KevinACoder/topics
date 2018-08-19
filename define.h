@@ -50,11 +50,16 @@ struct bst_node
 void cocktail_sort(val_type*& arr, const int len);
 void bucket_sort(val_type*& arr, const int n);
 string frequency_sort(string str);
-void merge(val_type*& arr, int low, int middle, int up);
-void merge_sort(val_type*& arr, int low, int up);
+void merge(val_type arr[], int low, int middle, int up);
+void merge_sort(val_type arr[], int low, int up);
 bst_node* insert_bst(bst_node *root, val_type key);
 void inorder_visit(bst_node *root, val_type*& arr, int& ix);
 void bst_sort(val_type*& arr, const int len);
+void bubble_sort(val_type arr[], const int len);
+void selection_sort(val_type arr[], const int len);
+void insert_sort(val_type arr[], const int len);
+int partition(val_type arr[], int low, int high); //return partition position
+void quick_sort(val_type arr[], int low, int high);
 
 void sort_demo();
 

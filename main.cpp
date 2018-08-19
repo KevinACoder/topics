@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
 	/* code */
 	srand(time(NULL));
-	//sort_demo();
-	linked_list_demo();
+	sort_demo();
+	//linked_list_demo();
 	return 0;
 }
