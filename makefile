@@ -17,7 +17,8 @@ OBJS =  \
 	stack.o \
 	queue.o \
 	binary_tree.o \
-	graph.o 
+	graph.o \
+	avl_tree.o
 
 # Here is a Make Macro defined by two Macro Expansions.
 # A Macro Expansion may be treated as a textual replacement of the Make Macro.
@@ -76,6 +77,7 @@ stack.o : define.h
 queue.o : define.h
 binary_tree.o : define.h
 graph.o : define.h
+avl_tree.o : define.h
 
 # Alternatively to manually capturing dependencies, several automated
 # dependency generators exist.  Here is one possibility (commented out)...
