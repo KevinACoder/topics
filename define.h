@@ -8,6 +8,8 @@
 #include <queue>
 #include <time.h>
 #include <limits.h>
+#include <stdlib.h>
+#include <stdio.h>
 using std::cout;
 using std::endl;
 using std::string;
@@ -143,5 +145,8 @@ void queue_demo();
 
 // ...graph
 void graph_demo();
+
+// ...test boost
+void boost_demo();
 
 #endif
