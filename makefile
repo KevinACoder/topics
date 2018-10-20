@@ -72,7 +72,7 @@ $(LINK_TARGET) : $(OBJS)
 # The commands for making an out-of-date target up-to-date may be found elsewhere
 # (in this case, by the Pattern Rule above).
 # Dependency Rules are often used to capture header file dependencies.
-main.o : define.h
+main.o : define.h data_structure.hpp
 sort.o : define.h
 linked_list.o : define.h
 stack.o : define.h
