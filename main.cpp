@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 	//stack_demo();
 	//queue_demo();
 	//graph_demo();
-	//boost_demo();
-	data_structure_demo();
+	boost_demo();
+	//data_structure_demo();
 	return 0;
 }

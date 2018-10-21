@@ -240,6 +240,84 @@ void variable_parameters()
 	cout<<endl;
 }
 
+#include <boost/tuple/tuple.hpp>
+boost::tuple<size_t, size_t, double>
+get_best_transact_days(std::vector<double> &prices)
+{
+	double min = std::numeric_limits<double>::max();
+	double gain = 0.0, max_gain = 0.0;
+	size_t min_day, max_day, buy_day;
+
+	for(size_t i = 0, days = prices.size(); i < days; ++i){
+		if(prices[i] < min){
+			min = prices[i];
+			min_day = i;
+		}else if((gain = prices[i] - min) > max_gain){
+			max_gain = gain;
+			buy_day = min_day;
+			max_day = i;
+		}
+	}
+
+	return boost::make_tuple(buy_day, max_day, max_gain);
+}
+
+struct st_type{
+	int    a;
+	double b;
+	char   c;
+};
+
+/*bool operator<(const st_type &left, const st_type &right){
+	return boost::make_tuple(left.a, left.b, left.c) <
+	boost::make_tuple(right.a, right.b, right.c);
+}*/
+
+void container_demo()
+{
+	vector<double> v = {1.35, 4.58, 6.72, 1.41, 2.57};
+	boost::tuple<size_t, size_t, double> best_day = 
+		get_best_transact_days(v);
+
+	cout<<boost::get<0>(best_day)<<" "<<boost::get<1>(best_day)<<" "
+		<<boost::get<2>(best_day)<<endl;
+
+	size_t buy_day, sell_day;
+	double profit;
+	boost::tie(buy_day, sell_day, profit) = 
+		get_best_transact_days(v);
+
+	cout<<"day: "<<buy_day<<"-"<<sell_day<<" earnings: "<<profit<<endl;
+
+	boost::tie(buy_day, sell_day, boost::tuples::ignore) = 
+		get_best_transact_days(v);
+
+	/*boost::tuple<size_t, size_t, double> best_day2 = 
+		get_best_transact_days(vector(v.begin() + 3, v.end()));
+
+	assert(best_day < best_day2);*/
+}
+
+#include <boost/variant.hpp>
+struct st_foo{
+	st_foo(int n = 0) : _id(n){}
+private:
+	int _id;
+};
+
+static void union_container()
+{
+	boost::variant<st_foo, int, string> value;
+	value = 1;
+	int *pi = boost::get<int>(&value);
+	if(pi != 0){
+		value = st_foo(42);
+		value = "foo";
+	}
+	string *ps = boost::get<string>(&value); 
+	cout<<*ps<<endl;
+}
+
 void boost_demo()
 {
 	/*const char *path = "./boost_t.cpp";
@@ -265,4 +343,8 @@ void boost_demo()
 	type_demo();
 
 	variable_parameters();
+
+	container_demo();
+
+	union_container();
 }
