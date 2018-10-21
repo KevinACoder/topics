@@ -19,7 +19,8 @@ OBJS =  \
 	binary_tree.o \
 	graph.o \
 	avl_tree.o \
-	boost_t.o
+	boost_t.o \
+	boost_t2.o
 
 
 # Here is a Make Macro defined by two Macro Expansions.
@@ -72,7 +73,7 @@ $(LINK_TARGET) : $(OBJS)
 # The commands for making an out-of-date target up-to-date may be found elsewhere
 # (in this case, by the Pattern Rule above).
 # Dependency Rules are often used to capture header file dependencies.
-main.o : define.h data_structure.hpp
+main.o : define.h data_structure.hpp progress_timer.hpp
 sort.o : define.h
 linked_list.o : define.h
 stack.o : define.h
@@ -81,6 +82,7 @@ binary_tree.o : define.h
 graph.o : define.h
 avl_tree.o : define.h
 boost_t.o : define.h
+boost_t2.o : define.h
 
 # Alternatively to manually capturing dependencies, several automated
 # dependency generators exist.  Here is one possibility (commented out)...

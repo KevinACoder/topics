@@ -318,11 +318,22 @@ static void union_container()
 	cout<<*ps<<endl;
 }
 
+#include <boost/timer.hpp>
+static void timer_demo()
+{
+	timer t;
+	cout<<"max time span: "<<t.elapsed_max()/3600<<"h"<<endl;
+	cout<<"min time span: "<<t.elapsed_min()<<"s"<<endl;
+	cout<<"now time: "<<t.elapsed()<<"s"<<endl;
+}
+
+extern void progress_display_demo();
+extern void date_time_demo();
 void boost_demo()
 {
 	/*const char *path = "./boost_t.cpp";
 	path_exist(path);*/
-	format_str();
+	/*format_str();
 	artise_ablbum_map dict = {{"music1", "man"}, {"music2", "woman"}};
 	
 	optional<string> opt = find_last_album_of(dict, "child");
@@ -347,4 +358,10 @@ void boost_demo()
 	container_demo();
 
 	union_container();
+
+	timer_demo();*/
+
+	//progress_display_demo();
+
+	date_time_demo();
 }
