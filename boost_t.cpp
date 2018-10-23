@@ -329,6 +329,7 @@ static void timer_demo()
 
 extern void progress_display_demo();
 extern void date_time_demo();
+extern void memory_demo();
 void boost_demo()
 {
 	/*const char *path = "./boost_t.cpp";
@@ -363,5 +364,7 @@ void boost_demo()
 
 	//progress_display_demo();
 
-	date_time_demo();
+	//date_time_demo();
+
+	memory_demo();
 }

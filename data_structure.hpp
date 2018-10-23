@@ -14,6 +14,11 @@ namespace data_structure
 
 		list_node(const x &val):_val(val),_next(nullptr),_prev(nullptr)
 		{}
+
+		bool operator<(const list_node &n1, const list_node &n2)
+		{
+			return n1._val < n2._val;
+		}
 	};
 
 	template<typename x>
@@ -101,6 +106,9 @@ namespace data_structure
 			}while(curr != lst._head);
 			return os;
 		}
+
+		//sort
+
 
 	private:
 		list_node<x> *alloc_node(const x &val)
