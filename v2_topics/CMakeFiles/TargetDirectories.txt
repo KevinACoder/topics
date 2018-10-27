@@ -1,0 +1,3 @@
+/home/pi/code/c/new_topics/CMakeFiles/rebuild_cache.dir
+/home/pi/code/c/new_topics/CMakeFiles/edit_cache.dir
+/home/pi/code/c/new_topics/CMakeFiles/topics.dir
