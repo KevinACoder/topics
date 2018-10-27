@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pi/code/c/new_topics -I/home/pi/boost/boost_1_60_0 
+CXX_INCLUDES = -I/home/pi/code/c/all_topics/v2_topics -I/home/pi/boost/boost_1_60_0 
 

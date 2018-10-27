@@ -31,6 +31,7 @@ if(Boost_FOUND)
 
     add_executable(topics 
         ${PROJECT_SOURCE_DIR}/src/main.cpp
-        ${PROJECT_SOURCE_DIR}/src/date_time_t.cpp)
+        ${PROJECT_SOURCE_DIR}/src/date_time_t.cpp
+        ${PROJECT_SOURCE_DIR}/src/smart_ptr_t.cpp)
     target_link_libraries (topics ${Boost_LIBRARIES})
 endif()

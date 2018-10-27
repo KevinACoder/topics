@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/code/c/new_topics/src/date_time_t.cpp" "/home/pi/code/c/new_topics/CMakeFiles/topics.dir/src/date_time_t.cpp.o"
-  "/home/pi/code/c/new_topics/src/main.cpp" "/home/pi/code/c/new_topics/CMakeFiles/topics.dir/src/main.cpp.o"
+  "/home/pi/code/c/all_topics/v2_topics/src/date_time_t.cpp" "/home/pi/code/c/all_topics/v2_topics/CMakeFiles/topics.dir/src/date_time_t.cpp.o"
+  "/home/pi/code/c/all_topics/v2_topics/src/main.cpp" "/home/pi/code/c/all_topics/v2_topics/CMakeFiles/topics.dir/src/main.cpp.o"
+  "/home/pi/code/c/all_topics/v2_topics/src/smart_ptr_t.cpp" "/home/pi/code/c/all_topics/v2_topics/CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

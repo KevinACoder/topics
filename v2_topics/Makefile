@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/code/c/new_topics
+CMAKE_SOURCE_DIR = /home/pi/code/c/all_topics/v2_topics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/code/c/new_topics
+CMAKE_BINARY_DIR = /home/pi/code/c/all_topics/v2_topics
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/c/new_topics/CMakeFiles /home/pi/code/c/new_topics/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/c/all_topics/v2_topics/CMakeFiles /home/pi/code/c/all_topics/v2_topics/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/c/new_topics/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/c/all_topics/v2_topics/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/smart_ptr_t.o: src/smart_ptr_t.cpp.o
+
+.PHONY : src/smart_ptr_t.o
+
+# target to build an object file
+src/smart_ptr_t.cpp.o:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o
+.PHONY : src/smart_ptr_t.cpp.o
+
+src/smart_ptr_t.i: src/smart_ptr_t.cpp.i
+
+.PHONY : src/smart_ptr_t.i
+
+# target to preprocess a source file
+src/smart_ptr_t.cpp.i:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/smart_ptr_t.cpp.i
+.PHONY : src/smart_ptr_t.cpp.i
+
+src/smart_ptr_t.s: src/smart_ptr_t.cpp.s
+
+.PHONY : src/smart_ptr_t.s
+
+# target to generate assembly for a file
+src/smart_ptr_t.cpp.s:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/smart_ptr_t.cpp.s
+.PHONY : src/smart_ptr_t.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/smart_ptr_t.o"
+	@echo "... src/smart_ptr_t.i"
+	@echo "... src/smart_ptr_t.s"
 .PHONY : help
 
 

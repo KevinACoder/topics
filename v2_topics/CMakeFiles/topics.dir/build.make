@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/code/c/new_topics
+CMAKE_SOURCE_DIR = /home/pi/code/c/all_topics/v2_topics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/code/c/new_topics
+CMAKE_BINARY_DIR = /home/pi/code/c/all_topics/v2_topics
 
 # Include any dependencies generated for this target.
 include CMakeFiles/topics.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/topics.dir/flags.make
 
 CMakeFiles/topics.dir/src/main.cpp.o: CMakeFiles/topics.dir/flags.make
 CMakeFiles/topics.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/code/c/new_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/topics.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/topics.dir/src/main.cpp.o -c /home/pi/code/c/new_topics/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/code/c/all_topics/v2_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/topics.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/topics.dir/src/main.cpp.o -c /home/pi/code/c/all_topics/v2_topics/src/main.cpp
 
 CMakeFiles/topics.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/topics.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/code/c/new_topics/src/main.cpp > CMakeFiles/topics.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/code/c/all_topics/v2_topics/src/main.cpp > CMakeFiles/topics.dir/src/main.cpp.i
 
 CMakeFiles/topics.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/topics.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/code/c/new_topics/src/main.cpp -o CMakeFiles/topics.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/code/c/all_topics/v2_topics/src/main.cpp -o CMakeFiles/topics.dir/src/main.cpp.s
 
 CMakeFiles/topics.dir/src/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/topics.dir/src/main.cpp.o.provides.build: CMakeFiles/topics.dir/src/m
 
 CMakeFiles/topics.dir/src/date_time_t.cpp.o: CMakeFiles/topics.dir/flags.make
 CMakeFiles/topics.dir/src/date_time_t.cpp.o: src/date_time_t.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/code/c/new_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/topics.dir/src/date_time_t.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/topics.dir/src/date_time_t.cpp.o -c /home/pi/code/c/new_topics/src/date_time_t.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/code/c/all_topics/v2_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/topics.dir/src/date_time_t.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/topics.dir/src/date_time_t.cpp.o -c /home/pi/code/c/all_topics/v2_topics/src/date_time_t.cpp
 
 CMakeFiles/topics.dir/src/date_time_t.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/topics.dir/src/date_time_t.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/code/c/new_topics/src/date_time_t.cpp > CMakeFiles/topics.dir/src/date_time_t.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/code/c/all_topics/v2_topics/src/date_time_t.cpp > CMakeFiles/topics.dir/src/date_time_t.cpp.i
 
 CMakeFiles/topics.dir/src/date_time_t.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/topics.dir/src/date_time_t.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/code/c/new_topics/src/date_time_t.cpp -o CMakeFiles/topics.dir/src/date_time_t.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/code/c/all_topics/v2_topics/src/date_time_t.cpp -o CMakeFiles/topics.dir/src/date_time_t.cpp.s
 
 CMakeFiles/topics.dir/src/date_time_t.cpp.o.requires:
 
@@ -105,21 +105,47 @@ CMakeFiles/topics.dir/src/date_time_t.cpp.o.provides: CMakeFiles/topics.dir/src/
 CMakeFiles/topics.dir/src/date_time_t.cpp.o.provides.build: CMakeFiles/topics.dir/src/date_time_t.cpp.o
 
 
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o: CMakeFiles/topics.dir/flags.make
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o: src/smart_ptr_t.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/code/c/all_topics/v2_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o -c /home/pi/code/c/all_topics/v2_topics/src/smart_ptr_t.cpp
+
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/topics.dir/src/smart_ptr_t.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/code/c/all_topics/v2_topics/src/smart_ptr_t.cpp > CMakeFiles/topics.dir/src/smart_ptr_t.cpp.i
+
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/topics.dir/src/smart_ptr_t.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/code/c/all_topics/v2_topics/src/smart_ptr_t.cpp -o CMakeFiles/topics.dir/src/smart_ptr_t.cpp.s
+
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.requires:
+
+.PHONY : CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.requires
+
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.provides: CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.requires
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.provides.build
+.PHONY : CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.provides
+
+CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.provides.build: CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o
+
+
 # Object files for target topics
 topics_OBJECTS = \
 "CMakeFiles/topics.dir/src/main.cpp.o" \
-"CMakeFiles/topics.dir/src/date_time_t.cpp.o"
+"CMakeFiles/topics.dir/src/date_time_t.cpp.o" \
+"CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o"
 
 # External object files for target topics
 topics_EXTERNAL_OBJECTS =
 
 topics: CMakeFiles/topics.dir/src/main.cpp.o
 topics: CMakeFiles/topics.dir/src/date_time_t.cpp.o
+topics: CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o
 topics: CMakeFiles/topics.dir/build.make
 topics: /usr/local/lib/libboost_regex.so
 topics: /usr/local/lib/libboost_system.so
 topics: CMakeFiles/topics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/code/c/new_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable topics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/code/c/all_topics/v2_topics/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable topics"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/topics.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -129,6 +155,7 @@ CMakeFiles/topics.dir/build: topics
 
 CMakeFiles/topics.dir/requires: CMakeFiles/topics.dir/src/main.cpp.o.requires
 CMakeFiles/topics.dir/requires: CMakeFiles/topics.dir/src/date_time_t.cpp.o.requires
+CMakeFiles/topics.dir/requires: CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o.requires
 
 .PHONY : CMakeFiles/topics.dir/requires
 
@@ -137,6 +164,6 @@ CMakeFiles/topics.dir/clean:
 .PHONY : CMakeFiles/topics.dir/clean
 
 CMakeFiles/topics.dir/depend:
-	cd /home/pi/code/c/new_topics && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/code/c/new_topics /home/pi/code/c/new_topics /home/pi/code/c/new_topics /home/pi/code/c/new_topics /home/pi/code/c/new_topics/CMakeFiles/topics.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pi/code/c/all_topics/v2_topics && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pi/code/c/all_topics/v2_topics /home/pi/code/c/all_topics/v2_topics /home/pi/code/c/all_topics/v2_topics /home/pi/code/c/all_topics/v2_topics /home/pi/code/c/all_topics/v2_topics/CMakeFiles/topics.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/topics.dir/depend
 
