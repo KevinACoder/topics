@@ -204,6 +204,33 @@ src/smart_ptr_t.cpp.s:
 	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/smart_ptr_t.cpp.s
 .PHONY : src/smart_ptr_t.cpp.s
 
+src/utility_t.o: src/utility_t.cpp.o
+
+.PHONY : src/utility_t.o
+
+# target to build an object file
+src/utility_t.cpp.o:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/utility_t.cpp.o
+.PHONY : src/utility_t.cpp.o
+
+src/utility_t.i: src/utility_t.cpp.i
+
+.PHONY : src/utility_t.i
+
+# target to preprocess a source file
+src/utility_t.cpp.i:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/utility_t.cpp.i
+.PHONY : src/utility_t.cpp.i
+
+src/utility_t.s: src/utility_t.cpp.s
+
+.PHONY : src/utility_t.s
+
+# target to generate assembly for a file
+src/utility_t.cpp.s:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/utility_t.cpp.s
+.PHONY : src/utility_t.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/smart_ptr_t.o"
 	@echo "... src/smart_ptr_t.i"
 	@echo "... src/smart_ptr_t.s"
+	@echo "... src/utility_t.o"
+	@echo "... src/utility_t.i"
+	@echo "... src/utility_t.s"
 .PHONY : help
 
 
