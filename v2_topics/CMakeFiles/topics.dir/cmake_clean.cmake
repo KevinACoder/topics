@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/topics.dir/src/date_time_t.cpp.o"
   "CMakeFiles/topics.dir/src/smart_ptr_t.cpp.o"
   "CMakeFiles/topics.dir/src/utility_t.cpp.o"
+  "CMakeFiles/topics.dir/src/system_t.cpp.o"
   "topics.pdb"
   "topics"
 )

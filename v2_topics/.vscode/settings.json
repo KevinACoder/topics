@@ -3,6 +3,9 @@
         "*.ipp": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "vector": "cpp"
-    }
+        "vector": "cpp",
+        "string": "cpp"
+    },
+    "python.pythonPath": "/usr/local/bin/python3.5",
+    "python.linting.enabled": false
 }
