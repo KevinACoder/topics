@@ -204,6 +204,33 @@ src/smart_ptr_t.cpp.s:
 	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/smart_ptr_t.cpp.s
 .PHONY : src/smart_ptr_t.cpp.s
 
+src/string_t.o: src/string_t.cpp.o
+
+.PHONY : src/string_t.o
+
+# target to build an object file
+src/string_t.cpp.o:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/string_t.cpp.o
+.PHONY : src/string_t.cpp.o
+
+src/string_t.i: src/string_t.cpp.i
+
+.PHONY : src/string_t.i
+
+# target to preprocess a source file
+src/string_t.cpp.i:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/string_t.cpp.i
+.PHONY : src/string_t.cpp.i
+
+src/string_t.s: src/string_t.cpp.s
+
+.PHONY : src/string_t.s
+
+# target to generate assembly for a file
+src/string_t.cpp.s:
+	$(MAKE) -f CMakeFiles/topics.dir/build.make CMakeFiles/topics.dir/src/string_t.cpp.s
+.PHONY : src/string_t.cpp.s
+
 src/system_t.o: src/system_t.cpp.o
 
 .PHONY : src/system_t.o
@@ -276,6 +303,9 @@ help:
 	@echo "... src/smart_ptr_t.o"
 	@echo "... src/smart_ptr_t.i"
 	@echo "... src/smart_ptr_t.s"
+	@echo "... src/string_t.o"
+	@echo "... src/string_t.i"
+	@echo "... src/string_t.s"
 	@echo "... src/system_t.o"
 	@echo "... src/system_t.i"
 	@echo "... src/system_t.s"

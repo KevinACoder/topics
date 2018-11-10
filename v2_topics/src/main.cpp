@@ -11,12 +11,14 @@ extern void mem_pool_demo();
 extern void utility_demo();
 extern void io_state_demo();
 extern void filesystem_demo();
+extern void string_demo();
 int main()
 {
 	cout<<"ok"<<endl;
 	cout<<"sw version"<<TOPICS_VERSION_MAJOR<<"."<<TOPICS_VERSION_MINOR<<endl;
 	
-	filesystem_demo();
+	string_demo();
+	//filesystem_demo();
 	//io_state_demo();
 	//utility_demo();
 	//date_demo();

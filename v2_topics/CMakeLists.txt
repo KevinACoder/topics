@@ -34,6 +34,7 @@ if(Boost_FOUND)
         ${PROJECT_SOURCE_DIR}/src/date_time_t.cpp
         ${PROJECT_SOURCE_DIR}/src/smart_ptr_t.cpp
         ${PROJECT_SOURCE_DIR}/src/utility_t.cpp
-        ${PROJECT_SOURCE_DIR}/src/system_t.cpp)
+        ${PROJECT_SOURCE_DIR}/src/system_t.cpp
+        ${PROJECT_SOURCE_DIR}/src/string_t.cpp)
     target_link_libraries (topics ${Boost_LIBRARIES})
 endif()
